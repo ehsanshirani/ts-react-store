@@ -31,7 +31,6 @@ import { Add, Remove, Delete } from "@mui/icons-material";
 //animations
 import { motion } from "framer-motion";
 
-// قدم ۱: ایمپورت کردن تایپ‌ها و اکشن‌های لازم
 
 //hepler
 import { shortenTiTle } from "../helper/shortenText";

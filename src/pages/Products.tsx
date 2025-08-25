@@ -120,7 +120,6 @@ const Products: FC = () => {
       );
     }
 
-    // نمایش گرید محصولات
     return (
       <Box
         sx={{

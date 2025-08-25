@@ -54,7 +54,6 @@ const Transition = forwardRef(function Transition(
 
 function Header() {
   const theme = useTheme();
-  // breakpoint سفارشی شما
   const isTablet = useMediaQuery(theme.breakpoints.down("tablet"));
 
   return (
@@ -79,7 +78,6 @@ function Header() {
 }
 
 const DesktopNav = () => {
-  // اصلاح: استفاده از مسیر صحیح برای دسترسی به state سبد خرید
   const { counter } = useSelector((store: RootState) => store.cartItems);
   const { theme } = useSelector((store: RootState) => store.theme);
   const dispatch: AppDispatch = useDispatch();
@@ -189,7 +187,6 @@ const MobileNav = () => {
         <List>
           {navLinks.map((link) => (
             <ListItem key={link.text} disablePadding>
-              {/* کامپوننت NavLinkCustom شما اینجا به درستی کار می‌کند */}
               <ListItemButton
                 component={NavLink}
                 to={link.to}

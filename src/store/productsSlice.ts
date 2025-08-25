@@ -3,7 +3,6 @@ import {
   createAsyncThunk,
   type PayloadAction,
 } from "@reduxjs/toolkit";
- 
 
 export interface ReviewType {
   reviewerName: string;
@@ -19,11 +18,7 @@ export interface ProductType {
   price: number;
   description: string;
   images: string[];
-  category: {
-    id: number;
-    name: string;
-    image: string;
-  };
+  category: string;
   rating: number;
   reviews?: ReviewType[];
 }
@@ -32,14 +27,14 @@ interface ProductsState {
   products: ProductType[];
   isLoading: boolean;
   error: string | null;
-  searchTerm: string; // <<-- قدم ۱: اضافه کردن state برای عبارت جستجو
+  searchTerm: string;
 }
 
 const initialState: ProductsState = {
   products: [],
   isLoading: false,
   error: null,
-  searchTerm: "", // <<-- مقدار اولیه برای عبارت جستجو
+  searchTerm: "",
 };
 
 export const fetchProducts = createAsyncThunk<
@@ -75,7 +70,6 @@ export const fetchProducts = createAsyncThunk<
 const productsSlice = createSlice({
   name: "products",
   initialState,
-  // قدم ۲: اضافه کردن reducer برای به‌روزرسانی عبارت جستجو
   reducers: {
     setSearchTerm: (state, action: PayloadAction<string>) => {
       state.searchTerm = action.payload;
@@ -101,6 +95,5 @@ const productsSlice = createSlice({
   },
 });
 
-// قدم ۳: اکسپورت کردن اکشن جدید
 export const { setSearchTerm } = productsSlice.actions;
 export default productsSlice.reducer;

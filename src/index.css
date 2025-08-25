@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: vazir !important;
+}
+body {
+  font-size: 16px;
+}
+
+.muirtl-1toxriw-MuiList-root-MuiMenu-list {
+  padding: 0 !important;
+}
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #f0f0f0;
+}
+::-webkit-scrollbar {
+  width: 4cap;
+  height: 4cap;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 8px;
+  border: 2px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+
+
